@@ -65,4 +65,4 @@ jobs:
     
     - name: Upload to S3
         run: |
-          aws s3 mb s3://Test-GitAction-Bucket1
+          aws s3 mb s3://git-action-bucket-350978175498-c-1
