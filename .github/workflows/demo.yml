@@ -5,7 +5,8 @@ on:
 
 jobs:
   build:
-    runs-on: [self-hosted]
+    runs-on: [self-hosted, Linux]
+    echo "Started the deployment"
     name: Run Deployment
     steps:
       - uses: actions/checkout@v3
