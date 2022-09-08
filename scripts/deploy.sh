@@ -5,12 +5,12 @@
 set -xeuo pipefail
 IFS=$'\n\t'
 
-target_account_id="584189967726"
+target_account_id="350978175498"
 
 response=$(
   aws sts assume-role                                                  \
-    --role-arn "arn:aws:iam::$target_account_id:role/DemoAllAccess" \
-    --role-session-name deployment-automation
+    --role-arn "arn:aws:iam::$target_account_id:role/Test-Git-ECS-Role" \
+    --role-session-name test-demo-gitActions
 )
 
 echo "$response" | jq '.'
@@ -35,7 +35,7 @@ export AWS_SESSION_TOKEN
 
 aws s3api create-bucket                                       \
   --bucket demo-bucket-for-netsuite-demo                      \
-  --region us-west-2                                          \
-  --create-bucket-configuration LocationConstraint=us-west-2
+  --region us-east-1                                          \
+  --create-bucket-configuration LocationConstraint=us-east-1
 
 aws s3api list-buckets
