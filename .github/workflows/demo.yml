@@ -1,4 +1,4 @@
-name: Cross Account Deployment  
+name: Test AWS deployment  
 
 on:
   workflow_dispatch:
@@ -6,8 +6,8 @@ on:
 jobs:
   build:
     runs-on: [self-hosted, Linux]
-    echo "Started the deployment"
     name: Run Deployment
+    
     steps:
       - uses: actions/checkout@v3
         with:
