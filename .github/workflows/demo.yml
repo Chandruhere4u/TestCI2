@@ -48,12 +48,12 @@ jobs:
     ################################
     # Run Linter against code base #
     ################################
-    - name: Lint Code Base
-      uses: github/super-linter@v4
-      env:
-        VALIDATE_ALL_CODEBASE: false
-        DEFAULT_BRANCH: main
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  
+    #- name: Lint Code Base
+      #uses: github/super-linter@v4
+      #env:
+        #VALIDATE_ALL_CODEBASE: false
+        #DEFAULT_BRANCH: main
+        #GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  
 
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v1
