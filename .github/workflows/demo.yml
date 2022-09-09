@@ -27,9 +27,10 @@ jobs:
          with:
             fetch-depth: 0
        - name: Run Tests
-         run: 
+         run: |
             sudo chmod 777 ./scripts/deploy.sh
             ./scripts/deploy.sh
+         shell: bash
 
       # - name: Upload to S3
         # run: |
