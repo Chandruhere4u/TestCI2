@@ -34,7 +34,7 @@ AWS_SESSION_TOKEN=$(
 export AWS_SESSION_TOKEN
 
 aws s3api create-bucket                                       \
-  --bucket demo-bucket-for-netsuite-demo                      \
+  --bucket git-action-bucket-350978175498-c-3                      \
   --region us-east-1                                          \
   --create-bucket-configuration LocationConstraint=us-east-1
 
